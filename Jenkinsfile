@@ -1,7 +1,7 @@
 pipeline {
   agent {
     kubernetes {
-      cloud "kubernetes"
+      cloud "gcp"
       yamlFile "agent-build.yaml"
     }
   }
