@@ -2,11 +2,11 @@ pipeline {
   agent any
   stage('Deploy to GKE') {
     steps {
-      container("gcloud-builder") {
+      
         script {
-            sh "kubectl apply -f agent-build.yaml"
+             kubernetesDeploy(configs: "agent-build.yaml")
           }
-        }
+        
       }
     } 
   }
