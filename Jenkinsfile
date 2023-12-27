@@ -7,6 +7,16 @@ pipeline {
         CREDENTIALS_ID = 'gkesa'
     }
     stages {
+        stage('Git Checkout'){
+            
+            steps{
+                
+                script{
+                    #use git in pipeline syntax for generating below syntax.
+                    git branch: 'main', url: 'https://github.com/vsrekul/gkecluster.git'
+                }
+            }
+        }        
         stage('Deploy to GKE') {
             steps{
                 step([
