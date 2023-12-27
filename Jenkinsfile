@@ -16,7 +16,7 @@ pipeline {
                 location: env.LOCATION,
                 manifestPattern: 'agent-build.yaml',
                 credentialsId: env.CREDENTIALS_ID
-                )
+                ])
             }
         }
     }
